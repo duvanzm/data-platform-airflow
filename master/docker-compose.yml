@@ -54,7 +54,7 @@ services:
       - |
         mkdir -p /opt/airflow/{logs,dags,plugins,config}
         chown -R "${AIRFLOW_UID}:0" /opt/airflow/
-        /entrypoint airflow db upgrade
+        /entrypoint airflow db migrate
 
   airflow-cli:
     <<: *airflow-common
