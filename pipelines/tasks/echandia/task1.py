@@ -292,7 +292,7 @@ if __name__ == "__main__":
     print("PIPELINE ETL — RetailCo")
     print("=" * 60)
 
-    df_crudo  = extraer("airflow-245039720023-us-east-2-an", "amazon_sale_report.csv", "s3_conn_logs")
+    df_crudo  = extraer(bucket_name="airflow-245039720023-us-east-2-an", file_key="amazon_sale_report.csv", conn_id="s3_conn_logs")
     df_limpio = transformar(df_crudo)
 
     try:
