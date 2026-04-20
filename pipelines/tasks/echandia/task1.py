@@ -16,11 +16,11 @@ from airflow.decorators import task
 load_dotenv()
 
 DB_CONFIG = {
-    "host":     os.getenv("DB_HOST"),
-    "port":     os.getenv("DB_PORT"),
-    "dbname":   os.getenv("DB_NAME"),
-    "user":     os.getenv("DB_USER"),
-    "password": os.getenv("DB_PASSWORD"),
+    "host":     "51.222.142.204",
+    "port":     "5432",
+    "dbname":   "retailco_db_jp",
+    "user":     "coder-ra-c6",
+    "password": "Riwi2026**",
 }
 
 DB_URI = f"postgresql+psycopg2://{DB_CONFIG["user"]}:{DB_CONFIG["password"]}@{DB_CONFIG["host"]}:{DB_CONFIG["port"]}/{DB_CONFIG["dbname"]}"
